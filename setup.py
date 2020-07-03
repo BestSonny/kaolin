@@ -231,7 +231,6 @@ if __name__ == '__main__':
         url=URL,
         long_description=LONG_DESCRIPTION,
         license=LICENSE,
-        python_requires='~=3.6',
 
         # Package info
         packages=find_packages(exclude=('docs', 'test', 'examples')),
