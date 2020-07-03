@@ -263,8 +263,8 @@ class Mesh():
                     edges.append([int(float(d)) for d in data[1:]])
                     read_edges += 1
                     continue
-        vertices = torch.FloatTensor(np.array(vertices, dtype=np.float32))
-        faces = torch.LongTensor(np.array(faces, dtype=np.int64))
+        vertices = torch.from_numpy(np.array(vertices, dtype=np.float32))
+        faces = torch.from_numpy(np.array(faces, dtype=np.int64))
 
         if enable_adjacency:
             edge2key, edges, vv, vv_count, ve, ve_count, vf, vf_count, ff, ff_count, \
