@@ -243,10 +243,10 @@ class Mesh():
                 if len(data) == 0:
                     continue
                 if metadata_read is False:
-                    num_vertices = int(data[0])
+                    num_vertices = int(float(data[0]))
                     num_faces = int(data[1])
                     if len(data) == 3:
-                        num_edges = int(data[2])
+                        num_edges = int(float(data[2]))
                     metadata_read = True
                     continue
                 if read_vertices < num_vertices:
@@ -254,7 +254,7 @@ class Mesh():
                     read_vertices += 1
                     continue
                 if read_faces < num_faces:
-                    numedges = int(data[0])
+                    numedges = int(float(data[0]))
                     faces.append([int(d) for d in data[1:1+numedges]])
                     read_faces += 1
                     continue
