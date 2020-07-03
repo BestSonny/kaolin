@@ -244,7 +244,7 @@ class Mesh():
                     continue
                 if metadata_read is False:
                     num_vertices = int(float(data[0]))
-                    num_faces = int(data[1])
+                    num_faces = int(float(data[1]))
                     if len(data) == 3:
                         num_edges = int(float(data[2]))
                     metadata_read = True
