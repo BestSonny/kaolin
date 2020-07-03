@@ -217,6 +217,7 @@ class Mesh():
         """
         vertices = []
         faces = []
+        edges = []
         num_vertices = 0
         num_faces = 0
         num_edges = 0
