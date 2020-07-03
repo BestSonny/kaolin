@@ -256,11 +256,11 @@ class Mesh():
                     continue
                 if read_faces < num_faces:
                     numedges = int(float(data[0]))
-                    faces.append([int(d) for d in data[1:1+numedges]])
+                    faces.append([int(float(d)) for d in data[1:1+numedges]])
                     read_faces += 1
                     continue
                 if read_edges < num_edges:
-                    edges.append([int(d) for d in data[1:]])
+                    edges.append([int(float(d)) for d in data[1:]])
                     read_edges += 1
                     continue
         vertices = torch.FloatTensor(np.array(vertices, dtype=np.float32))
