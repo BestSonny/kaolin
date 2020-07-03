@@ -224,7 +224,7 @@ class Mesh():
         # been read.
         read_vertices = 0
         read_faces = 0
-        read_edgs = 0
+        read_edges = 0
         # Flag to indicate whether or not metadata (number of vertices,
         # number of faces, (optionally) number of edges) has been read.
         # For .off files, metadata is the first valid line of each file
