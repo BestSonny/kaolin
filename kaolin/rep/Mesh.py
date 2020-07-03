@@ -237,7 +237,7 @@ class Mesh():
                 if line.startswith('#'):
                     continue
                 if line.startswith('OFF'):
-                    continue
+                    line = line.replace('OFF','')
                 data = line.strip().split()
                 data = [da for da in data if len(da) > 0]
                 # Ignore blank lines
